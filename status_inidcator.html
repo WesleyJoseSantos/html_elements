@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+
+html {
+    font: 12px/1.2em sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-left: 5px;
+}
+
+.bloch {
+    display:inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.on {background: green;}
+.off {background: gray;}
+.rdy {background: darkblue;}
+.problem {background: gold;}
+.fail {background: red;}
+
+</style>
+</head>
+<body>
+
+<h3>Status blocks</h3>
+<ul>
+<li>
+    <span class='bloch on'></span>
+    Good good
+</li>
+</ul>
+</body>
+</html>
+
+<script>
+    
+    var bloch = document.getElementsByClassName('on');
+    var count = bloch.length;
+
+    for (let index = 0; index < bloch.length; index++) {
+        const element = bloch.item(index);
+        element.className = "bloch off";
+    }
+
+</script>
